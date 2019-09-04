@@ -11,6 +11,9 @@
 
 ### 安装
 npm install typescript@2.9.2 -g
+  检查安装成功与否
+  tsc -help 
+  tsserver -h
 npm install ts-node@7.0.0 -g
 想尝试新版本可以去掉 @2.9.2 和 @7.0.0
 
@@ -43,3 +46,5 @@ npm install ts-node@7.0.0 -g
 
 ### TS 官方教程
 [五分钟教程](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+
+参考文章：https://segmentfault.com/a/1190000011935122
