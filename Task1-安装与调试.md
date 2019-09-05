@@ -48,3 +48,50 @@ npm install ts-node@7.0.0 -g
 [五分钟教程](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 
 参考文章：https://segmentfault.com/a/1190000011935122
+
+### 构建你的第一个TypeScript文件＃
+在编辑器中，键入以下JavaScript代码greeter.ts：
+```
+  function greeter(person) {
+      return "Hello, " + person;
+  }
+
+  let user = "Jane User";
+
+  document.body.textContent = greeter(user);
+```
+运行之后会有一个报错： document is not defined
+这个报错出现的**原因：** 没有放到页面，所以就没有document
+
+### Tsc是什么
+- 1.浏览器可以直接运行JS
+- 2.浏览器不能直接运行TS
+- 3.*（推导出：）* 要把TS 变成 JS，才能运行在浏览器运行
+
+把TS => JS 的工具，就叫做tsc
+
+**tsc: Type Script Compiler (TS编译器)**
+
+命令行运行 `tsc greeter.ts`
+就会把 greeter.ts 变成 greeter.js
+
+```
+function greeter(person:string) {
+  return "Hello, " + person;
+}
+
+let user = "Jane User";
+
+document.body.textContent = greeter(user);
+```
+参数后面+ : string
+命令行再重新运行 `tsc greeter.ts`
+发现编译出的文件 greeter.js 没什么变化
+
+在 greeter.ts 中 `let user = [0, 1, 2];`
+命令行再重新运行 `tsc greeter.ts`
+出现一个报错：
+> greeter.ts(7,37): error TS2345: Argument of type 'number[]' is not assignable to parameter of type 'string'.
+
+user 要一个字符串，但是参数却是一个数组
+编译JS失败
