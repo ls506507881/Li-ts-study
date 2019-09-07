@@ -5,3 +5,4 @@ function greeter(person:string) {
 let user = "Herbert Lee";
 
 console.log(greeter(user))
+console.log(greeter(user))
