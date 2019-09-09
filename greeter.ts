@@ -10,10 +10,10 @@ interface Person {
   名: string;
 }
 
-function greeter(person : Student) {
-  return "Hello, " + person.全名;
+function greeter(person : Person) {
+  return "Hello, " + person.姓 + person.名;
 }
 
-let user = new Student("李", "帅帅");
+let user = new Student("李", "帅");
 
 console.log(greeter(user))
