@@ -42,8 +42,12 @@
 // console.log(b)
 
 // --------------
+enum Gender{
+  Male,
+  Female
+}
 interface Person{
-  gender: string;
+  gender: Gender;
 }
 
 function merry(a:Person,b:Person):[Person,Person]{
@@ -54,6 +58,6 @@ function merry(a:Person,b:Person):[Person,Person]{
   }
 }
 
-let a = { gender: '男' };
-let b = { gender:'女' };
+let a = { gender: Gender.Male };
+let b = { gender: Gender.Female };
 console.log(merry(a,b));
