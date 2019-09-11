@@ -11,3 +11,4 @@ function greeter(person) {
 }
 var user = new Student("李", "帅");
 document.body.innerHTML = greeter(user);
+
